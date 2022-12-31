@@ -1,0 +1,5 @@
+.DS_Store
+pack/*
+spell/*.add
+spell/*.add.spl
+plugin
