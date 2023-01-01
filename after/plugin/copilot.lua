@@ -4,5 +4,5 @@
 vim.g.copilot_no_maps = 0
 
 -- Remap copilot to use the same keybindings as vim
-vim.keymap.set('i', '<C-j>', '<Plug>(copilot-next)', {noremap = false}) 
-vim.keymap.set('i', '<C-k>', '<Plug>(copilot-previous)', {noremap = false}) 
+vim.keymap.set('i', '<C-j>', '<Plug>(copilot-next)', {noremap = false})
+vim.keymap.set('i', '<C-k>', '<Plug>(copilot-previous)', {noremap = false})

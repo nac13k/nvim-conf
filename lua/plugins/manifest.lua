@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   -- Git plugins
-  use {'f-person/git-blame.nvim'}
+  use {'lewis6991/gitsigns.nvim'}
 
   -- Themes and ui improves
   use {'morhetz/gruvbox'}

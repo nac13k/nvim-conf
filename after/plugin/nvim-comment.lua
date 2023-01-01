@@ -19,7 +19,5 @@ require('nvim_comment').setup({
   hook = nil
 })
 
--- Maps
-
--- vim-commentary
-vim.keymap.set("", "<leader>/", ":CommentToggle<CR>", {noremap = true})
+-- Mapping for nvim-commentary
+vim.keymap.set("", "<leader>/", ":CommentToggle<CR>", {noremap = true}) -- Toggle comment on line or selected region (use command string for mapping because is the simple way to use the plugin, for many modes)

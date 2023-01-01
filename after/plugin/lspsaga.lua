@@ -8,9 +8,8 @@ saga.init_lsp_saga {
   finder_request_timeout = 30000 -- request timeout in milliseconds
 }
 
-local opts = { noremap = true, silent = true }
-
 -- Mappings
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>k', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.keymap.set('n', '<leader>j', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', '<C-x>', '<Cmd>Lspsaga hover_doc<CR>', opts)

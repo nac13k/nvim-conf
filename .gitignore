@@ -2,4 +2,4 @@
 pack/*
 spell/*.add
 spell/*.add.spl
-plugin
+/plugin

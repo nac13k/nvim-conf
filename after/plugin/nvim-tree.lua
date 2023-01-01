@@ -38,7 +38,7 @@ require'nvim-tree'.setup {
   },
   filters = {
     dotfiles = false,
-    custom = { '.git', 'node_modules', '.cache' },
+    custom = { '^\\.git$', 'node_modules', '^\\.cache' }, -- Regex filters, will ignore files/folders matching the regex
   },
   git = {
     enable = true,
@@ -146,5 +146,5 @@ require'nvim-tree'.setup {
 
 -- Mapping
 -- NvimTreeOpen and NvimTreeClose are available if you need them
-vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>n', vim.cmd.NvimTreeToggle, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>r', vim.cmd.NvimTreeRefresh, { noremap = true, silent = true })

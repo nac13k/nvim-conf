@@ -21,6 +21,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- Mapping
-vim.keymap.set('n', '<leader>ds', '<cmd>GoDebug<CR>', {noremap = true, silent = true}) -- Start debugging
-vim.keymap.set('n', '<leader>dt', '<cmd>GoDbgStop<CR>', {noremap = true, silent = true}) -- Stop debugging
-vim.keymap.set('n', '<leader>b', '<cmd>GoBreakToggle<CR>', {noremap = true, silent = true}) -- Toggle breakpoint
+vim.keymap.set('n', '<leader>ds', vim.cmd.GoDebug, {noremap = true, silent = true}) -- Start debugging
+vim.keymap.set('n', '<leader>dt', vim.cmd.GoDbgStop, {noremap = true, silent = true}) -- Stop debugging
+vim.keymap.set('n', '<leader>b', vim.cmd.GoBreakToggle, {noremap = true, silent = true}) -- Toggle breakpoint
