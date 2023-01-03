@@ -17,6 +17,6 @@ vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
 vim.keymap.set('n', 'ca', '<Cmd>Lspsaga code_action<CR>', opts)
 
--- Floating terminal shortcuts
-vim.keymap.set("n", "<C-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
-vim.keymap.set("t", "<C-d>", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { silent = true })
+-- Floating terminal shortcuts -- disable because I use toggleterm
+-- vim.keymap.set("n", "<C-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
+-- vim.keymap.set("t", "<C-d>", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { silent = true })

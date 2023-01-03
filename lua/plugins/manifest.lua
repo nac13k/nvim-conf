@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
   -- Status line
   use {'hoob3rt/lualine.nvim'}
   -- Toogle terminal
-  use {'caenrique/nvim-toggle-terminal'}
+  use {'akinsho/nvim-toggleterm.lua', tag = "*"}
   -- focus.nvim nicely panes when work with splited buffers
   use {'beauwilliams/focus.nvim'}
 
