@@ -1,3 +1,3 @@
 require("core")
 require("plugins")
-require("plugins.themes.gruvbox") -- Change to your favorite theme, options: gruvbox, molokai, tokyonight, or create your own theme config
+require("plugins.themes.nightfox") -- Change to your favorite theme, options: gruvbox, molokai, tokyonight, nightfox, or create your own theme config

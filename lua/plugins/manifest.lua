@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   -- Themes and ui improves
   use {'morhetz/gruvbox'}
   use {'tomasr/molokai'}
+  use {'EdenEast/nightfox.nvim'}
   use {'folke/tokyonight.nvim', branch = 'main'}
 
   -- Github Copilot
