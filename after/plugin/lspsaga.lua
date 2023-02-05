@@ -10,6 +10,7 @@ saga.setup {
   ui = {
     boder = 'single',
     winblend = 1,
+    win_height = 1.0,
     colors = {
       normal_bg = '#1e222a',
       title_fg = '#a9b1d6',

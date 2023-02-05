@@ -62,6 +62,13 @@ gem install neovim
 npm install -g neovim
 ```
 
+### Lspsaga dependencies
+
+```vimscript
+:TSInstall markdown
+```
+
+
 ### Spectre plugin (find and replace function like vscode)
 
 ```bash
