@@ -20,6 +20,7 @@ require('gitsigns').setup {
   on_attach = function()
     local gs = package.loaded.gitsigns
 
+    vim.keymap.set('n', '<leader>gd', gs.toggle_deleted, { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>gs', gs.toggle_signs, { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>gh', gs.toggle_linehl , { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>gb', gs.toggle_current_line_blame, { noremap = true, silent = true })
