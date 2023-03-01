@@ -12,5 +12,8 @@ end
 
 -- config
 vim.o.foldmethod = 'indent'
+vim.o.foldlevelstart = 99
+vim.o.fillchars = 'stl: ,stlnc: ,fold: ,foldopen:▾,foldsep:│,foldclose:▸'
+
 vim.keymap.set('n', '<leader>z', ToogleFold, {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>Z', FoldPlusOne, {noremap = true, silent = true})
