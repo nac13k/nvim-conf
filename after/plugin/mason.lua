@@ -1,5 +1,5 @@
 -- Description: Mason configuration
--- Author: Francisco Lumbreras
+-- Author: Lumbreras
 -- License: MIT
 -- Version: 0.1.0
 -- References:
