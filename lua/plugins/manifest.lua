@@ -12,19 +12,21 @@ return require('packer').startup(function(use)
   use { 'romainl/vim-cool' }
   -- Add nvim comment (easy comment)
   use { 'terrortylor/nvim-comment' }
-  --  Add cmp to nvim for autocompletion
-  use {'neovim/nvim-lspconfig' }
-  -- Easy instalation for LSP
-  use {'williamboman/nvim-lsp-installer' }
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'hrsh7th/cmp-buffer'}
+  -- Add mason to nvim to manage LSP dependencies
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
+  -- Autocomplete with nvim-cmp
   use {'hrsh7th/nvim-cmp'}
-  use {'onsails/lspkind-nvim'}
-  -- Cmp plugins for ultisnips users.
-  use {'quangnguyen30192/cmp-nvim-ultisnips'}
-  -- Ultisnipets
-  use {'SirVer/ultisnips'}
-  use {'honza/vim-snippets'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'saadparwaiz1/cmp_luasnip'}
+  -- Snippets
+  use { 'L3MON4D3/LuaSnip' }
+  use {'rafamadriz/friendly-snippets'}
   -- Fuzzy finder with telescope plugins
   use {'nvim-lua/popup.nvim'}
   use {'nvim-lua/plenary.nvim'}
@@ -65,12 +67,10 @@ return require('packer').startup(function(use)
   use {'ray-x/go.nvim'}
   use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
   -- Enable debugger and a better ui
-  -- use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use {'mfussenegger/nvim-dap'}
   use {'rcarriga/nvim-dap-ui'}
   use {'theHamsta/nvim-dap-virtual-text'}
 
   -- Navigation plugins
   use {'phaazon/hop.nvim'}
-
 end)
