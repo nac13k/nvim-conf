@@ -26,7 +26,7 @@ vim.opt.swapfile = false
 vim.opt.wrap = false
 
 -- nvim-cmp config required
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 -- Search settings
 vim.opt.hlsearch = true
