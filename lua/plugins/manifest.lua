@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use {'tomasr/molokai'}
   use {'EdenEast/nightfox.nvim'}
   use {'folke/tokyonight.nvim', branch = 'main'}
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- Github Copilot
   use {'github/copilot.vim'}
