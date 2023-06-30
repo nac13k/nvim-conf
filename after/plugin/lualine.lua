@@ -3,7 +3,7 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = "catppuccin",
+    theme = "tokyonight",
     disabled_filetypes = {},
     always_divide_middle = true,
   },

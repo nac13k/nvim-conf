@@ -19,7 +19,6 @@ local servers = {
   'diagnosticls',
   'dockerls',
   'dotls',
-  'eslint',
   'emmet_ls',
   'gopls',
   'golangci_lint_ls',
@@ -32,6 +31,7 @@ local servers = {
   'sqlls',
   'tailwindcss',
   'terraformls',
+  'tsserver',
   'yamlls',
 }
 

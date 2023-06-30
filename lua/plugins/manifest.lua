@@ -18,6 +18,10 @@ return require('packer').startup(function(use)
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
   }
+  -- Diagnostics, code actions, and formatting
+  use('jose-elias-alvarez/null-ls.nvim')
+  -- Formatters
+  use('MunifTanjim/prettier.nvim')
   -- Autocomplete with nvim-cmp
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-buffer'}
@@ -74,4 +78,6 @@ return require('packer').startup(function(use)
 
   -- Navigation plugins
   use {'phaazon/hop.nvim'}
+
+
 end)
