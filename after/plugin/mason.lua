@@ -28,6 +28,7 @@ local servers = {
   'spectral',
   'pyright',
   'solargraph',
+  -- 'ruby-lsp',
   'sqlls',
   'tailwindcss',
   'terraformls',

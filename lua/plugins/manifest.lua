@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     'neovim/nvim-lspconfig',
   }
   -- Diagnostics, code actions, and formatting
-  use('jose-elias-alvarez/null-ls.nvim')
+  -- use('jose-elias-alvarez/null-ls.nvim')
   -- Formatters
   use('MunifTanjim/prettier.nvim')
   -- Autocomplete with nvim-cmp
