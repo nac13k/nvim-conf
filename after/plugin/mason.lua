@@ -28,7 +28,7 @@ local servers = {
   'spectral',
   'pyright',
   'solargraph',
-  -- 'ruby-lsp',
+  'rubocop',
   'sqlls',
   'tailwindcss',
   'terraformls',
@@ -51,7 +51,25 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 
 
 -- Config servers
-local custom_lsp_config = {}
+local custom_lsp_config = {
+  -- custom config for solargraph server (ruby)
+  -- enabling all the features for solargraph
+  solargraph = {
+    -- on_attach = function(client)
+    --   client.resolved_capabilities.document_formatting = true
+    --   client.resolved_capabilities.document_range_formatting = true
+    --   mason.on_attach(client)
+    -- end,
+    on_attach = mason.on_attach,
+    capabilities = lsp_defaults.capabilities,
+    settings = {
+      ruby = {
+        diagnostics = true,
+        formatting = true,
+      },
+    },
+  }
+}
 local default_lsp_config = {
   on_attach = mason.on_attach,
   capabilities = lsp_defaults.capabilities,

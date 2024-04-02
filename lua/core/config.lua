@@ -42,7 +42,8 @@ vim.opt.fileencodings = "utf-8"
 -- OS tweaks
 
 -- Python location
-vim.g.python3_host_prog = "/usr/bin/python3" -- Optional, for python3 support
+-- vim.g.python3_host_prog = "/usr/bin/python3" -- Optional, for python3 support
+vim.g.python3_host_prog = "/opt/homebrew/bin/python3"
 
 -- Integrate clipboard with system clipboard
 if vim.fn.has("unnamedplus") == 1 then

@@ -17,7 +17,7 @@ sign({name = 'DiagnosticSignHint', text = '⚑'})
 sign({name = 'DiagnosticSignInfo', text = 'ℹ'})
 
 vim.diagnostic.config({
-  virtual_text = false, -- (optional) Enable virtual text. e.g. {prefix = '', spacing = 0}
+  virtual_text = {prefix = '', spacing = 0}, -- (optional) Enable virtual text. e.g. {prefix = '', spacing = 0}
   signs = true, -- (optional) Enable signs, disabled by default
   underline = true, -- (optional) Enable underline, enabled by default
   update_in_insert = false, -- (optional) Update diagnostics insert mode, false by default
