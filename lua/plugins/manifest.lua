@@ -5,9 +5,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Beuatyfull UI for LSP
-  use {'glepnir/lspsaga.nvim', branch = 'main' }
+  use { 'glepnir/lspsaga.nvim', branch = 'main' }
   -- Add commong syntax highlight with treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   --  Add vim-cool to remove highlight after finish search and press any key to change the nvim mode
   use { 'romainl/vim-cool' }
   -- Add nvim comment (easy comment)
@@ -21,63 +21,71 @@ return require('packer').startup(function(use)
   -- Diagnostics, code actions, and formatting
   -- use('jose-elias-alvarez/null-ls.nvim')
   -- Formatters
-  use('MunifTanjim/prettier.nvim')
+  -- use('MunifTanjim/prettier.nvim')
+  --Plug 'sbdchd/neoformat'
+  use { 'sbdchd/neoformat' }
   -- Autocomplete with nvim-cmp
-  use {'hrsh7th/nvim-cmp'}
-  use {'hrsh7th/cmp-buffer'}
-  use {'hrsh7th/cmp-path'}
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'saadparwaiz1/cmp_luasnip'}
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'saadparwaiz1/cmp_luasnip' }
   -- Snippets
   use { 'L3MON4D3/LuaSnip' }
-  use {'rafamadriz/friendly-snippets'}
+  use { 'rafamadriz/friendly-snippets' }
   -- Fuzzy finder with telescope plugins
-  use {'nvim-lua/popup.nvim'}
-  use {'nvim-lua/plenary.nvim'}
-  use {'nvim-telescope/telescope.nvim'}
+  use { 'nvim-lua/popup.nvim' }
+  use { 'nvim-lua/plenary.nvim' }
+  use { 'nvim-telescope/telescope.nvim' }
   -- Icons
-  use {'kyazdani42/nvim-web-devicons'}
+  use { 'kyazdani42/nvim-web-devicons' }
   -- nvim-tree a lua plugin similar to nerd-tree
-  use {'kyazdani42/nvim-tree.lua'}
+  use { 'kyazdani42/nvim-tree.lua' }
   -- nvim-bufferline
-  use {'akinsho/nvim-bufferline.lua', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use { 'akinsho/nvim-bufferline.lua', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   -- delimitMate add auto close parentheses
-  use {'Raimondi/delimitMate'}
+  use { 'Raimondi/delimitMate' }
   -- Status line
-  use {'hoob3rt/lualine.nvim'}
+  use { 'hoob3rt/lualine.nvim' }
   -- Toogle terminal
-  use {'akinsho/nvim-toggleterm.lua', tag = "*"}
+  use { 'akinsho/nvim-toggleterm.lua', tag = "*" }
   -- focus.nvim nicely panes when work with splited buffers
-  use {'beauwilliams/focus.nvim'}
+  use { 'beauwilliams/focus.nvim', tag = "v1.0.2" }
 
   -- DBML syntax support
-  use {'jidn/vim-dbml'}
+  use { 'jidn/vim-dbml' }
   -- Markdown
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = {
+        "markdown" }
+    end,
+    ft = { "markdown" },
+  })
 
   -- Git plugins
-  use {'lewis6991/gitsigns.nvim'}
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- Themes and ui improves
-  use {'morhetz/gruvbox'}
-  use {'tomasr/molokai'}
-  use {'EdenEast/nightfox.nvim'}
-  use {'folke/tokyonight.nvim', branch = 'main'}
+  use { 'morhetz/gruvbox' }
+  use { 'tomasr/molokai' }
+  use { 'EdenEast/nightfox.nvim' }
+  use { 'folke/tokyonight.nvim', branch = 'main' }
   use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- Github Copilot
-  use {'github/copilot.vim'}
+  use { 'github/copilot.vim' }
 
   -- Plugins for lang
-  use {'ray-x/go.nvim'}
-  use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
+  use { 'ray-x/go.nvim' }
+  use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }
   -- Enable debugger and a better ui
-  use {'mfussenegger/nvim-dap'}
-  use {'rcarriga/nvim-dap-ui'}
-  use {'theHamsta/nvim-dap-virtual-text'}
+  use { 'mfussenegger/nvim-dap' }
+  use { 'rcarriga/nvim-dap-ui' }
+  use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Navigation plugins
-  use {'phaazon/hop.nvim'}
-
-
+  use { 'phaazon/hop.nvim' }
 end)

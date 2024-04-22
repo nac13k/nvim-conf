@@ -15,16 +15,16 @@ require('go').setup({
 -- require("dapui").setup()
 -- require("nvim-dap-virtual-text").setup()
 
-local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-    require('go.format').goimport() -- require("go.format").gofmt() it's called by goimport
-  end,
-  group = format_sync_grp,
-})
+-- local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.go",
+--   callback = function()
+--     require('go.format').goimport() -- require("go.format").gofmt() it's called by goimport
+--   end,
+--   group = format_sync_grp,
+-- })
 
 -- Mapping
-vim.keymap.set('n', '<leader>ds', vim.cmd.GoDebug, {noremap = true, silent = true}) -- Start debugging
-vim.keymap.set('n', '<leader>dt', vim.cmd.GoDbgStop, {noremap = true, silent = true}) -- Stop debugging
-vim.keymap.set('n', '<leader>b', vim.cmd.GoBreakToggle, {noremap = true, silent = true}) -- Toggle breakpoint
+vim.keymap.set('n', '<leader>ds', vim.cmd.GoDebug, { noremap = true, silent = true })    -- Start debugging
+vim.keymap.set('n', '<leader>dt', vim.cmd.GoDbgStop, { noremap = true, silent = true })  -- Stop debugging
+vim.keymap.set('n', '<leader>b', vim.cmd.GoBreakToggle, { noremap = true, silent = true }) -- Toggle breakpoint

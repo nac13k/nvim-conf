@@ -2,9 +2,10 @@
 local function formatter()
   local bufType = vim.bo.filetype
   if bufType == 'typescript' or bufType == 'javascript' or bufType == 'typescriptreact' then
-    vim.cmd('Prettier')
+    vim.cmd('Neoformat prettier')
   else
-    vim.lsp.buf.format({ async = false })
+    vim.cmd('Neoformat')
+    -- vim.lsp.buf.format({ async = false })
   end
 end
 
