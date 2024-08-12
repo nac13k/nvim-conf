@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
   -- nvim-tree a lua plugin similar to nerd-tree
   use { 'kyazdani42/nvim-tree.lua' }
   -- nvim-bufferline
-  use { 'akinsho/nvim-bufferline.lua', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'akinsho/nvim-bufferline.lua', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
   -- delimitMate add auto close parentheses
   use { 'Raimondi/delimitMate' }
   -- Status line
@@ -82,9 +82,9 @@ return require('packer').startup(function(use)
   use { 'ray-x/go.nvim' }
   use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }
   -- Enable debugger and a better ui
-  use { 'mfussenegger/nvim-dap' }
-  use { 'rcarriga/nvim-dap-ui' }
-  use { 'theHamsta/nvim-dap-virtual-text' }
+  -- use { 'mfussenegger/nvim-dap' }
+  -- use { 'rcarriga/nvim-dap-ui' }
+  -- use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Navigation plugins
   use { 'phaazon/hop.nvim' }
