@@ -32,7 +32,7 @@ local servers = {
   'sqlls',
   'tailwindcss',
   'terraformls',
-  'tsserver',
+  'ts_ls',
   'yamlls',
 }
 
@@ -41,6 +41,7 @@ local servers = {
 mason.setup()
 masonLspCongig.setup {
   ensure_installed = servers,
+  automatic_enable = false,
 }
 
 lsp_defaults.capabilities = vim.tbl_deep_extend(

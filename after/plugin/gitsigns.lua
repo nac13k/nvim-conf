@@ -10,12 +10,12 @@ require('gitsigns').setup {
     follow_files = true
   },
   current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`, show the blame information of the current line
-  current_line_blame_opts = {
-    virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-    delay = 200,
-    ignore_whitespace = false,
-  },
+  -- current_line_blame_opts = {
+  --   virt_text = true,
+  --   virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+  --   delay = 200,
+  --   ignore_whitespace = false,
+  -- },
   current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
   on_attach = function()
     local gs = package.loaded.gitsigns

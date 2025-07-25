@@ -8,11 +8,11 @@ vim.g.go_debug_mappings = {
 }
 
 require('go').setup({
-  max_line_len = 120,
+  -- max_line_len = 120,
   test_dir = '',
   dap_debug = true,
 })
--- require("dapui").setup()
+require("dapui").setup()
 -- require("nvim-dap-virtual-text").setup()
 
 -- local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})

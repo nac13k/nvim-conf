@@ -82,8 +82,9 @@ return require('packer').startup(function(use)
   use { 'ray-x/go.nvim' }
   use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }
   -- Enable debugger and a better ui
-  -- use { 'mfussenegger/nvim-dap' }
-  -- use { 'rcarriga/nvim-dap-ui' }
+  use { 'mfussenegger/nvim-dap' }
+  use { 'rcarriga/nvim-dap-ui' }
+  use { 'nvim-neotest/nvim-nio' }
   -- use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Navigation plugins
