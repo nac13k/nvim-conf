@@ -34,7 +34,7 @@ local function configureRubocopFormatter()
 
   vim.g.neoformat_ruby_rubocop = {
     exe = runner.exe,
-    args = vim.list_extend(vim.deepcopy(runner.args), { '-A', '--stdin', '%:p' }),
+    args = vim.list_extend(vim.deepcopy(runner.args), { '--stderr', '-A', '--stdin', '%:p' }),
     stdin = 1,
   }
 
