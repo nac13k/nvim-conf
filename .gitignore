@@ -3,3 +3,10 @@ pack/*
 spell/*.add
 spell/*.add.spl
 /plugin
+
+# vim agent session manager
+.claude-session
+.opencode-session
+.vim-agent-sessions
+.vim-agent
+
