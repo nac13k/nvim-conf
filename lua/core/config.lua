@@ -51,3 +51,12 @@ if vim.fn.has("unnamedplus") == 1 then
 else
 	vim.opt.clipboard = "unnamed" -- Share system clipboard with vim
 end
+
+-- Reload files changed outside nvim (e.g. by Claude Code in another terminal)
+vim.opt.autoread = true
+local checktimeTimer = vim.uv.new_timer()
+checktimeTimer:start(2000, 2000, vim.schedule_wrap(function()
+  if vim.fn.mode() ~= 'c' and vim.fn.getcmdwintype() == '' then
+    vim.cmd('silent! checktime')
+  end
+end))
