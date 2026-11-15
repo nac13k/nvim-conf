@@ -32,3 +32,7 @@ vim.keymap.set("", "<C-l>", "<C-W>l")
 vim.keymap.set("n", "<leader>q", vim.cmd.bp) -- previous buffer
 vim.keymap.set("n", "<leader>w", vim.cmd.bn) -- next buffer
 vim.keymap.set("n", "<leader>cb", vim.cmd.bd) -- close current buffer
+
+-- Toggle comment (native gc/gcc, nvim >= 0.10)
+vim.keymap.set('n', '<leader>/', 'gcc', { remap = true, desc = 'Toggle comment line' })
+vim.keymap.set('x', '<leader>/', 'gc', { remap = true, desc = 'Toggle comment selection' })

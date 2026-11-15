@@ -5,19 +5,16 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Beuatyfull UI for LSP
-  use { 'glepnir/lspsaga.nvim', branch = 'main' }
+  use { 'nvimdev/lspsaga.nvim', branch = 'main' }
   -- Add commong syntax highlight with treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- main branch: master is archived and breaks on nvim 0.12 (needs tree-sitter-cli)
+  use { 'nvim-treesitter/nvim-treesitter', branch = 'main', run = ':TSUpdate' }
   --  Add vim-cool to remove highlight after finish search and press any key to change the nvim mode
   use { 'romainl/vim-cool' }
-  -- Add nvim comment (easy comment)
-  use { 'terrortylor/nvim-comment' }
   -- Add mason to nvim to manage LSP dependencies
-  use {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig', branch = 'master'
-  }
+  use { 'mason-org/mason.nvim' }
+  use { 'mason-org/mason-lspconfig.nvim' }
+  use { 'neovim/nvim-lspconfig' }
   -- Diagnostics, code actions, and formatting
   -- use('jose-elias-alvarez/null-ls.nvim')
   -- Formatters
@@ -34,23 +31,22 @@ return require('packer').startup(function(use)
   use { 'L3MON4D3/LuaSnip' }
   use { 'rafamadriz/friendly-snippets' }
   -- Fuzzy finder with telescope plugins
-  use { 'nvim-lua/popup.nvim' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
   -- Icons
-  use { 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-tree/nvim-web-devicons' }
   -- nvim-tree a lua plugin similar to nerd-tree
-  use { 'kyazdani42/nvim-tree.lua' }
+  use { 'nvim-tree/nvim-tree.lua' }
   -- nvim-bufferline
-  use { 'akinsho/nvim-bufferline.lua', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'akinsho/bufferline.nvim', tag = '*', requires = 'nvim-tree/nvim-web-devicons' }
   -- delimitMate add auto close parentheses
   use { 'Raimondi/delimitMate' }
   -- Status line
-  use { 'hoob3rt/lualine.nvim' }
+  use { 'nvim-lualine/lualine.nvim' }
   -- Toogle terminal
-  use { 'akinsho/nvim-toggleterm.lua', tag = "*" }
+  use { 'akinsho/toggleterm.nvim', tag = '*' }
   -- focus.nvim nicely panes when work with splited buffers
-  use { 'beauwilliams/focus.nvim', tag = "v1.0.2" }
+  use { 'nvim-focus/focus.nvim' }
 
   -- DBML syntax support
   use { 'jidn/vim-dbml' }
@@ -88,5 +84,5 @@ return require('packer').startup(function(use)
   -- use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Navigation plugins
-  use { 'phaazon/hop.nvim' }
+  use { 'smoka7/hop.nvim' }
 end)

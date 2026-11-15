@@ -2,31 +2,11 @@
 
 local saga = require 'lspsaga'
 
-saga.setup {
-  -- Icon's order       Error, Warn, Info, Hint
-  diagnostic_header = { "😡", "😥", "😤", "😐" },
-  -- request timeout in milliseconds
-  finder_request_timeout = 30000,
+saga.setup({
   ui = {
-    boder = 'single',
-    winblend = 1,
-    win_height = 1.0,
-    colors = {
-      normal_bg = '#1e222a',
-      title_fg = '#a9b1d6',
-      cyan = '#008080',
-      red = '#ff0000',
-      green = '#98be65',
-      yellow = '#ECBE7B',
-      blue = '#51afef',
-      magenta = '#c678dd',
-      white = '#a9b1d6',
-      black = '#1e222a',
-      orange = '#FF8800',
-      purple = '#a9b1d6',
-    },
-  }
-}
+    border = 'single',
+  },
+})
 
 -- Mappings
 local opts = { noremap = true, silent = true }

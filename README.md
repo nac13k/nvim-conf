@@ -83,6 +83,12 @@ brew install gnu-sed
 brew install fd ripgrep
 ```
 
+### Treesitter parsers
+nvim-treesitter (main branch) compiles parsers with the tree-sitter CLI (not the npm one):
+```
+brew install tree-sitter-cli
+```
+
 ### Usefull commands
 
 Treesitter

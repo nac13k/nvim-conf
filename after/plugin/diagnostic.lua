@@ -3,22 +3,16 @@
 -- License: MIT
 -- Version: 0.1.0
 
-local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
-end
-
-sign({name = 'DiagnosticSignError', text = '✘'})
-sign({name = 'DiagnosticSignWarn', text = '▲'})
-sign({name = 'DiagnosticSignHint', text = '⚑'})
-sign({name = 'DiagnosticSignInfo', text = 'ℹ'})
-
 vim.diagnostic.config({
   virtual_text = {prefix = '', spacing = 0}, -- (optional) Enable virtual text. e.g. {prefix = '', spacing = 0}
-  signs = true, -- (optional) Enable signs, disabled by default
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '✘',
+      [vim.diagnostic.severity.WARN] = '▲',
+      [vim.diagnostic.severity.HINT] = '⚑',
+      [vim.diagnostic.severity.INFO] = 'ℹ',
+    },
+  },
   underline = true, -- (optional) Enable underline, enabled by default
   update_in_insert = false, -- (optional) Update diagnostics insert mode, false by default
   severity_sort = false, -- (optional) Sort diagnostics by severity. false by default
